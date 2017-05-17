@@ -1,0 +1,21 @@
+module.exports = {
+    likes: '{likes, number} megusta',
+    logout: 'Salir',
+    english: 'Inglés',
+    spanish: 'Español',
+    signup_subheading: 'Regístrate para ver fotos de tus amigos estudiando en Arcoders',
+    signin_subheading: 'Comparte imágenes con la comunidad',
+    signup_facebook: 'Iniciar sesión con Facebook',
+    signup_text: 'Iniciar sesión',
+    email: 'Correo electronico',
+    username: 'Nombre de usuario',
+    fullname: 'Nombre completo',
+    password: 'Contraseña',
+    signup_call_to_action: 'Regístrate',
+    signup_have_account: '¿Tienes una cuenta?',
+    signin: 'Entrar',
+    signin_not_have_account: '¿No tines una cuenta?',
+    language: 'Idioma',
+    upload_picture: 'Subir foto',
+    upload: 'Subir'
+};
