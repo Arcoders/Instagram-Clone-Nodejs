@@ -55,9 +55,8 @@ app.get('/api/pictures', function(req, res){
         createdAt: new Date().setDate(new Date().getDate() - 20)
       }
     ];
-    setTimeout(function () {
-        res.send(pictures);
-    }, 2000);
+
+    res.send(pictures);
 });
 
 app.post('/api/pictures', function(req, res) {
@@ -67,6 +66,35 @@ app.post('/api/pictures', function(req, res) {
         }
         res.send('File uploaded successfully');
     });
+});
+
+app.get('/api/user/:username', function (req, res) {
+    const user = {
+        username: 'Ismael_Haytam',
+        avatar: 'https://avatars2.githubusercontent.com/u/26773339?v=3&s=460',
+        pictures: [
+            {
+                id: 1,
+                src: 'https://s-media-cache-ak0.pinimg.com/originals/0c/83/c9/0c83c92bddf0e94ac8ebea6dc0c468a2.jpg',
+                likes: 7
+            },
+            {
+                id: 2,
+                src: 'https://4.bp.blogspot.com/-5DZTR-AAZ5o/Vyih_PCwdVI/AAAAAAAAXy8/tXYD47RQ-rgRx97PMDJUSJucHOXuBGbkQCLcB/s1600/2016-spofec-rolls-royce-wraith-0.jpg',
+                likes: 10
+            },
+            {
+                id: 3,
+                src: 'https://www.lamborghini.com/es-en/sites/es-en/files/DAM/lamborghini/model/huracan/huracan-avio/left.jpg',
+                likes: 24
+            }
+        ]
+    }
+    res.send(user);
+});
+
+app.get('/:username', function (req, res) {
+    res.render('index', { title: `Fotogram - ${req.params.username}` });
 });
 
 app.listen(3000, function (err) {

@@ -12,10 +12,12 @@ module.exports = function pictureCard(pic) {
                         <img class="activator" src="${info.url}">
                       </div>
                       <div class="card-content">
-                        <a href='/user/${info.user.username}'>
-                            <img src="${info.user.avatar}" class="avatar">
-                            <span class="username">${info.user.username}</span>
-                        </a>
+                        <b>
+                            <a href='/${info.user.username}'>
+                                <img src="${info.user.avatar}" class="avatar">
+                                <span class="username">${info.user.username}</span>
+                            </a>
+                        </b>
                         <small class="right time">${moment(info.createdAt).fromNow()}</small>
                         <p>
                             <a class="left" href="#" onclick=${like.bind(null, true)}>
